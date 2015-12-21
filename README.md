@@ -1,11 +1,10 @@
 # Angular Memory Game
 
-Install the required tools: `yo`, `gulp`, `bower`
-```
-npm install -g yo gulp bower
-```
+## demo: 
+http://nestorneto.github.io/angular-memory-game/dist/#/game
 
-Install the required tools: `yo`, `gulp`, `bower`
+
+###Install the required tools: `yo`, `gulp`, `bower`
 ```
 npm install -g yo gulp bower
 ```
