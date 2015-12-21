@@ -1,0 +1,6 @@
+<div class="mg-tile-container" ng-click="TileCtrl.onClick()" ng-class="{flipped: (tile.isSelected || tile.isCorrect)}">
+  <div class="tile-back"></div>
+  <div class="tile-front" layout="column" layout-align="center center">
+    <div class="tile-front-image" style="background-image: url('{{tile.img}}')"></div>
+  </div>
+</div>

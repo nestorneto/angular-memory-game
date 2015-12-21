@@ -1,0 +1,93 @@
+mg-tile {
+  position: relative;
+  box-sizing: border-box;
+  //width: 120px;
+  //height: 120px;
+  padding: 5px;
+  width: 12.5%;
+  height: 25%;
+  display: block;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .mg-tile-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    outline: none;
+
+    &.flipped, &.correct {
+      .tile-front {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+      }
+
+      .tile-back {
+        -webkit-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+      }
+    }
+
+    &.match {
+      .tile-front {
+        .tile-front-image {
+          width: 70%;
+          height: 70%;
+        }
+
+      }
+    }
+
+    .tile-back, .tile-front {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transition: -webkit-transform 0.3s, background 0.3s;
+      transition: transform 0.3s, background 0.3s;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+
+    }
+
+    .tile-back {
+      -webkit-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+      box-shadow: 0 0 0 1px #787a80;
+      background: transparent url('../assets/images/card-back.png');
+    }
+
+    .tile-front {
+      position: relative;
+      -webkit-transform: rotateY(-180deg);
+      transform: rotateY(-180deg);
+      background: white;
+      box-shadow: 0 0 0 1px #787a80;
+
+      .tile-front-image {
+        position: absolute;
+        top: 0;
+        right:0;
+        bottom: 0;
+        left:0;
+        display: block;
+        width: 60%;
+        height: 60%;
+        margin: auto;
+        background: transparent 50% 50% no-repeat;
+        background-size: contain;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+      }
+    }
+  }
+}
+

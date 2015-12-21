@@ -1,0 +1,5 @@
+<div class="game-board-container">
+  <div class="game-board-line" ng-repeat="line in GameBoardCtrl.lines">
+    <mg-tile ng-repeat="tile in line track by $index" tile="tile"></mg-tile>
+  </div>
+</div>

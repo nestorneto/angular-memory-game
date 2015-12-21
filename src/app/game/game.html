@@ -1,0 +1,21 @@
+<div class="game-container game-finished">
+
+  <div class="game-info-bar" layout="row" layout-align="space-between center">
+    <div>
+      <span>Current Level: <strong>{{GameCtrl.getCurrentLevel()}}</strong></span>
+      <span>Total Moves: <strong>{{GameCtrl.getTotalMoves()}}</strong></span>
+    </div>
+
+    <div>
+      <md-button ng-click="GameCtrl.resetGame()">Reset Game</md-button>
+    </div>
+  </div>
+
+  <mg-game-board mg-level="GameCtrl.getCurrentLevel()"></mg-game-board>
+
+  <div class="game-finished" ng-show="GameCtrl.gameFinished()">
+    <h1>CONGRATULATIONS</h1>
+    <md-button ng-click="GameCtrl.resetGame()">NEW GAME</md-button>
+  </div>
+  <div class="fireworks" ng-if="GameCtrl.gameFinished()"></div>
+</div>
